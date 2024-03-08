@@ -1,0 +1,23 @@
+import board.Board;
+import player.Player;
+import game.Game;
+
+public class App {
+    public static void main(String[] args) throws Exception {
+        System.out.println("Project -> Tic Tac Toe");
+
+        Board b = new Board(3, '-');
+        b.printBoardConfig();
+
+        Player p1 = new Player();
+        p1.SetPlayerDetails("ravi", 40, "9000009999", "rav@gmail.com", "bhupalpally", 'X');
+        p1.getPlayerdetails();
+
+        Player p2 = new Player();
+        p2.SetPlayerDetails("Ram", 28, "9999999888", "ram@gmail.com", "Hanamkonda", 'O');
+        p2.getPlayerdetails();
+
+        Game game = new Game(new Player[] {p1,p2}, b);
+        game.play();
+    }
+}
