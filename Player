@@ -1,0 +1,42 @@
+package player;
+
+public class Player {
+   private String name;
+   private int age;
+   private String contact_no;
+   private String email_id;
+   private String address;
+   private char Symbol;
+
+   public void SetPlayerDetails(String name,int age,String contact_no,String email_id,String address,char Symbol){
+    this.name = name;
+    this.age = age;
+    this.contact_no = contact_no;
+    this.email_id = email_id;
+    this.address = address;
+    this.Symbol = Symbol;
+   }
+
+   public void setNameAndSymbol(String name,char Symbol){
+    this.name = name;
+    this.Symbol = Symbol;
+   }
+
+   public String getPlayerName(){
+    return this.name;
+   }
+
+   public char getPlayerSymbol(){
+    return this.Symbol;
+   }
+
+   public void getPlayerdetails(){
+    System.out.println("Player Name is " + this.name);
+    System.out.println("Player Age is " + this.age);
+    System.out.println("Player contact_no is " + this.contact_no);
+    System.out.println("Player emai_id is " + this.email_id);
+    System.out.println("Player address is " + this.address);
+    System.out.println("Player Symbol is " + this.Symbol);
+   }
+
+}
